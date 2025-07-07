@@ -14,7 +14,7 @@ public class ReciprocalArraySum {
     }
 
     // Parallel implementation using ForkJoin
-    public static short parArraySum(double[] input) {
+    public static Void parArraySum(double[] input) {
         ForkJoinPool pool = new ForkJoinPool();
         return pool.invoke(new ReciprocalArraySumTask(input, 0, input.length));
     }
